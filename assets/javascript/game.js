@@ -1,151 +1,4 @@
 $(function () {
-    console.log("ready");
-
-    /*var phase = 0,
-        playerCharacter = "",
-        obiWan = $("#obiWan"),
-        skywalker = $("#skywalker"),
-        sidious = $("#sidious"),
-        maul = $("#maul"),
-        character = $("#character"),
-        defender = $("#defender"),
-        remaining = $("#remainingEnemies")
-
-    if (phase === 0) {
-
-        obiWan.on("click", function () {
-            phase++;
-            playerCharacter = "Obi Wan";
-            console.log(playerCharacter);
-            character.append(obiWan);
-            remaining.append(skywalker);
-            remaining.append(sidious);
-            remaining.append(maul);
-        });
-
-        skywalker.on("click", function () {
-            phase++;
-            playerCharacter = "Luke Skywalker";
-            console.log(playerCharacter);
-            character.append(skywalker);
-            remaining.append(obiWan);
-            remaining.append(sidious);
-            remaining.append(maul);
-        });
-
-        sidious.on("click", function () {
-            phase++;
-            playerCharacter = "Darth Sidious";
-            console.log(playerCharacter);
-            character.append(sidious);
-            remaining.append(skywalker);
-            remaining.append(obiWan);
-            remaining.append(maul);
-        });
-
-        maul.on("click", function () {
-            phase++;
-            playerCharacter = "Darth Maul";
-            console.log(playerCharacter);
-            character.append(maul);
-            remaining.append(skywalker);
-            remaining.append(sidious);
-            remaining.append(obiWan);
-        });
-
-    } else {
-
-        obiWan.on("click", function () {
-            console.log("Test");
-        });
-        skywalker.on("click", function () {
-            console.log("Test");
-        });
-        sidious.on("click", function () {
-            console.log("Test");
-        });
-        maul.on("click", function () {
-            console.log("Test");
-        });
-    }*/
-
-    /*
-    var obiWan = $("#obiWan"),
-        skywalker = $("#skywalker"),
-        sidious = $("#sidious"),
-        maul = $("#maul"),
-        character = $("#character"),
-        defender = $("#defender"),
-        remaining = $("#remainingEnemies"),
-        phase = 0,
-        playerCharacter,
-        defenderCharacter,
-        defenderHP,
-        defenderCP,
-        playerHP,
-        playerAP,
-        originalPlayerAP = 0;
-
-    function reset() {
-        defender.empty();
-        remaining.empty();
-        character.empty();
-        characters.append(obiWan);
-        characters.append(skywalker);
-        characters.append(sidious);
-        characters.append(maul);
-        phase = 0;
-        player
-        updateInfo();
-    };
-
-    function updateInfo() {
-        $("#obiWan .health").text(obiWan.data("hp"));
-        $("#skywalker .health").text(skywalker.data("hp"));
-        $("#sidious .health").text(sidious.data("hp"));
-        $("#maul .health").text(maul.data("hp"));
-        console.log("updated info")
-    };
-
-    $(document).on("click", ".character", function () {
-        if (phase == 0) {
-            character.append(this);
-            playerCharacter = $(this);
-            playerHP = playerCharacter.data("hp");
-            playerAP = playerCharacter.data("ap");
-            originalPlayerAP = playerAP;
-            var remainingChars = $("#characters .character");
-            remaining.append(remainingChars);
-            phase++;
-        } else if (phase == 1) {
-            defender.append(this);
-            defenderCharacter = $(this);
-            defenderHP = defenderCharacter.data("hp");
-            defenderCP = defenderCharacter.data("cp");
-            phase++;
-        } else {
-            console.log("characters already selected")
-        };
-    });
-
-    $(document).on("click", "#attack", function () {
-        if (phase == 0) {
-            console.log(phase);
-        } else if (phase == 1) {
-            console.log(phase);
-        } else {
-            defenderHP -= playerAP;
-            console.log(defenderHP);
-            playerHP -= defenderCP;
-            console.log(playerHP);
-            updateInfo();
-            console.log(playerAP);
-            console.log(originalPlayerAP);
-            playerAP += originalPlayerAP;
-            console.log(playerAP);
-        };
-    });
-    */
 
     var player,
         defender,
@@ -153,7 +6,6 @@ $(function () {
         baseAP = 0,
         playerSelected = false,
         defenderSelected = false;
-
 
     var Character = function (name, hp, ap, cp, pic) {
         this.name = name;
@@ -198,7 +50,7 @@ $(function () {
     $(document).on("click", "#obiWan", function () {
         if (playerSelected === false && defenderSelected === false) {
             player = obiWan;
-            baseAP = obiwan.ap;
+            baseAP = obiWan.ap;
             playerSelected = true;
             $("#character").append(this);
             var remainingChars = $("#characters .character");
