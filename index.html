@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Star Wars RPG</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+</head>
+
+<body>
+    <h1>Star Wars RPG</h1>
+    <div id="characters">
+        <div class="container character" id="obiWan">
+            <div class="name"></div>
+            <img class="charCard">
+            <div class="health"></div>
+        </div>
+        <div class="container character" id="skywalker">
+            <div class="name"></div>
+            <img class="charCard">
+            <div class="health"></div>
+        </div>
+        <div class="container character" id="sidious">
+            <div class="name"></div>
+            <img class="charCard">
+            <div class="health"></div>
+        </div>
+        <div class="container character" id="maul">
+            <div class="name"></div>
+            <img class="charCard">
+            <div class="health"></div>
+        </div>
+    </div>
+    <div>
+        <h2>Your Character: </h2>
+        <div id="character"></div>
+    </div>
+    <div>
+        <h2>Enemies available to attack: </h2>
+        <div id="remainingEnemies"></div>
+    </div>
+    <div>
+        <h2>Fight area: </h2>
+        <div id="alert"></div>
+        <button id="attack">Attack</button>
+        <h3>Defender: </h2>
+        <div id="defender"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/Javascript/game.js"></script>
+</body>
+
+</html>
