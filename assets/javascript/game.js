@@ -118,7 +118,7 @@ $(function () {
     $(document).on("click", "#attack", function () {
         if (playerSelected === true && defenderSelected === true) {
             player.attack(defender);
-            if (defender.hp < 0) {
+            if (defender.hp < 1) {
                 $("#defender").empty();
                 defenderSelected = false;
                 $("#alert").text(defender.name + " has been defeated! Select a new opponent.")
