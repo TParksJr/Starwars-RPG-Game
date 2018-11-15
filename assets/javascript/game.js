@@ -25,10 +25,10 @@ $(function () {
             };
     };
 
-    var obiWan = new Character("Obi Wan Kenobi", 200, 10, 10, "./assets/images/ObiWan.jpg");
-    var skywalker = new Character("Luke Skywalker", 150, 15, 15, "./assets/images/LukeSkywalker.png");
-    var sidious = new Character("Darth Sidious", 100, 20, 20, "./assets/images/DarthSidious.jpg");
-    var maul = new Character("Darth Maul", 175, 15, 15, "./assets/images/DarthMaul.png");
+    var obiWan = new Character("Obi Wan Kenobi", 200, 10, 10, "../../ObiWan.jpg");
+    var skywalker = new Character("Luke Skywalker", 150, 15, 15, "../../LukeSkywalker.png");
+    var sidious = new Character("Darth Sidious", 100, 20, 20, "../../DarthSidious.jpg");
+    var maul = new Character("Darth Maul", 175, 15, 15, "../../DarthMaul.png");
     charArr.push(obiWan, skywalker, sidious, maul);
 
     function updateInfo() {
