@@ -2,6 +2,7 @@ $(function () {
 
     var player,
         defender,
+        npcs = 3,
         charArr = [],
         baseAP = 0,
         playerSelected = false,
@@ -121,7 +122,12 @@ $(function () {
             if (defender.hp < 1) {
                 $("#defender").empty();
                 defenderSelected = false;
-                $("#alert").text(defender.name + " has been defeated! Select a new opponent.")
+                npcs--;
+                if (npcs < 1) {
+                    $("#alert").text(defender.name + " has been defeated! You win!")
+                } else {
+                    $("#alert").text(defender.name + " has been defeated! Select a new opponent.")
+                }
             } else {
                 defender.counterAttack(player);
                 updateInfo();
